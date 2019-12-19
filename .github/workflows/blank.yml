@@ -1,0 +1,19 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+      - name: Setup Ruby for use with actions
+        uses: actions/setup-ruby@v1.0.0
+      - name: install awesome bot
+        run: gem install awesome_bot
+      - name: check links
+        run: |
+          awesome_bot -f README.md --allow-ssl --allow-redirect --allow-dupe --white-list www.linkedin.com,www.hostelworldgroup.com,www.olxgroup.com,www.prozis.com
