@@ -5,9 +5,11 @@ on: [pull_request]
 jobs:
   build:
 
+    timeout-minutes: 5
     runs-on: ubuntu-latest
 
     steps:
+      
       - name: Checkout code
         uses: actions/checkout@v1
       - name: Setup Ruby for use with actions
@@ -15,5 +17,6 @@ jobs:
       - name: install awesome bot
         run: gem install awesome_bot
       - name: check links
+        timeout-minutes: 2
         run: |
           awesome_bot -f README.md --allow-ssl --allow-redirect --allow-dupe --white-list www.linkedin.com,www.hostelworldgroup.com,www.olxgroup.com,www.prozis.com
