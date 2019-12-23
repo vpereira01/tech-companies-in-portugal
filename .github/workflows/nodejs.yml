@@ -23,4 +23,4 @@ jobs:
         npm install -g remark-cli 
     - name: Validate links
       run: |
-        remark -u remark-lint-no-dead-urls README.md
+        remark -q README.md
