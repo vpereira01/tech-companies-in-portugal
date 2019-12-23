@@ -19,9 +19,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        npm init
-        npm install --save remark remark-preset-lint-markdown-style-guide
-        npm install --save remark-cli remark-preset-lint-recommended
-        npm run lint-md
+#        npm install remark remark-preset-lint-markdown-style-guide
+        npm install remark-cli remark-preset-lint-recommended
+        remark -u preset-lint-recommended readme.md
       env:
         CI: true
