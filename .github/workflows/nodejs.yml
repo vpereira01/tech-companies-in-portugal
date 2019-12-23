@@ -17,11 +17,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-#        npm install remark remark-preset-lint-markdown-style-guide
+    - name: npm install
       run: |
-        npm install remark-preset-lint-recommended
+        npm install remark-lint-no-dead-urls
         npm install -g remark-cli 
-        remark -u preset-lint-recommended README.md
-      env:
-        CI: true
+    - name: Validate links
+      run: |
+        remark -u remark-lint-no-dead-urls README.md
