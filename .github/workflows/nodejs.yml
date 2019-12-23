@@ -20,7 +20,7 @@ jobs:
     - name: npm install
       run: |
         npm install remark-lint-no-dead-urls
-        npm install -g remark-cli 
+        npm install -g remark-cli
     - name: Validate links
       run: |
-        remark -q README.md
+        remark --no-stdout README.md
