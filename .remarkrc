@@ -1,0 +1,8 @@
+{
+  "remarkConfig": {
+      "skipLocalhost": true
+  },
+  "plugins": [
+    "remark-lint-no-dead-urls"
+  ]
+}
