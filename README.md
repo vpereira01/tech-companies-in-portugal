@@ -1,5 +1,5 @@
-# Tech Companies in Portugal :portugal:
-
+# Tech Companies in Portugal :portugal: 
+ 
 [![Build Status](https://travis-ci.com/marmelo/tech-companies-in-portugal.svg?branch=master)](https://travis-ci.com/marmelo/tech-companies-in-portugal)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/marmelo/tech-companies-in-portugal/blob/master/LICENSE)
 
